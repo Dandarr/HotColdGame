@@ -1,0 +1,28 @@
+1\ A group of one or more worker processes, configured with common settings.
+
+2\ Service unavailable error: generic error meaning that the user CAN reach the server.
+However the server is unable to process the request at the moment for an unspecified reason.
+
+3\ shade of grey
+
+4\port 443 for most webtraffic.
+
+5\ 1433 by default
+
+6\Postman is an application used for API testing. It is an HTTP client that tests HTTP requests, utilizing a graphical user interface.
+
+7\ see program.cs
+
+8a\ SELECT * FROM salesperson a
+WHERE EXISTS (SELECT * FROM customer b     
+    WHERE a.salesperson_id=b.salesperson_id and (select * from b.orders where b.cust_id = 4)
+
+8b\ SELECT SalesPerson.Name, (SELECT COUNT(salesPerson_ID) FROM Orders WHERE SalesPerson_ID = SalesPerson.salesperson_id) AS No_of_sales, (SELECT MAX(Amount) FROM Orders Where SalesPerson_ID = SalesPerson.salesperson_id) As Largest_sale, (SELECT AVG(select order_date,
+datediff(day,lag(order_date,,1) over (partition by salesperson_id order by order_date, asc),order_date) as day_diffrence
+from orders), select Distinct salesPerson_id (SELECT AVG(Number) as AvrgSalesPerPerson FROM orders);
+
+9\ Both will Error. A will error because the columns that the data will bind to havent been specified unlike B. 
+B will error because the email is not in a string format. 
+Additionally the fact that the columns and the values of B do not match up could cause issues as accountNumber may be an int and inserting a string into it wont work.
+
+10\ see index.html
